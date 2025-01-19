@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1533d783-dea5-44e1-9952-09771c370df2" name="Changes" comment="update all changes">
+      <change afterPath="$PROJECT_DIR$/src/test/java/comassignment/BrokenLinks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/comassignment/CheckBoxes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/comassignment/SeleniumSwitchTabAndWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/comassignment/Shadow_Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/comassignment/CaptureScreenShotOfSpecificArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/comassignment/CaptureScreenShotOfSpecificArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/comassignment/SSL_Certification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/comassignment/SSL_Certification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/comassignment/SwitchWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/comassignment/SwitchWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/comassignment/TC001_UseCase_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/comassignment/TC001_UseCase_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/comassignment/TC002_UseCase_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/comassignment/TC002_UseCase_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/comassignment/CaptureScreenShotOfSpecificArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/comassignment/CaptureScreenShotOfSpecificArea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/comassignment/SSL_Certification.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/comassignment/SSL_Certification.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/comassignment/SwitchWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/comassignment/SwitchWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/comassignment/TC001_UseCase_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/comassignment/TC001_UseCase_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/comassignment/TC002_UseCase_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/comassignment/TC002_UseCase_2.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="practice" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2mNP9RT5oTQWXBiqYFpzzNqZa9R" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Selenium_Assignment",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.37816092",
+    "settings.editor.selected.configurable": "vcs.Git"
+  },
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Selenium_Assignment" />
+      <recent name="C:\Selenium_Assignment\test-output" />
+      <recent name="C:\Selenium_Assignment\src\ExcelFiles" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.AlertHandle.handleAlert">
+    <configuration name="AlertHandle.handleAlert" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="comassignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="comassignment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="comassignment" />
+      <option name="MAIN_CLASS_NAME" value="comassignment.AlertHandle" />
+      <option name="METHOD_NAME" value="handleAlert" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KeyBoardActions.keyboardActions" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="comassignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="comassignment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="comassignment" />
+      <option name="MAIN_CLASS_NAME" value="comassignment.KeyBoardActions" />
+      <option name="METHOD_NAME" value="keyboardActions" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReadDataFromExcel.readDataFromExcl" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="comassignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="comassignment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="comassignment" />
+      <option name="MAIN_CLASS_NAME" value="comassignment.ReadDataFromExcel" />
+      <option name="METHOD_NAME" value="readDataFromExcl" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScrollToElement" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="comassignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="comassignment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="comassignment" />
+      <option name="MAIN_CLASS_NAME" value="comassignment.ScrollToElement" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScrollToElement.scrollToElement" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="comassignment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="comassignment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="comassignment" />
+      <option name="MAIN_CLASS_NAME" value="comassignment.ScrollToElement" />
+      <option name="METHOD_NAME" value="scrollToElement" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.AlertHandle.handleAlert" />
+        <item itemvalue="TestNG.ScrollToElement.scrollToElement" />
+        <item itemvalue="TestNG.ScrollToElement" />
+        <item itemvalue="TestNG.ReadDataFromExcel.readDataFromExcl" />
+        <item itemvalue="TestNG.KeyBoardActions.keyboardActions" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1533d783-dea5-44e1-9952-09771c370df2" name="Changes" comment="" />
+      <created>1726913908390</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726913908390</updated>
+    </task>
+    <task id="LOCAL-00001" summary="files added">
+      <created>1737266913617</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1737266913618</updated>
+    </task>
+    <task id="LOCAL-00002" summary="files added">
+      <created>1737267710609</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737267710609</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="files added" />
+    <MESSAGE value="files newly added" />
+    <MESSAGE value="update all changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="update all changes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/comassignment/CaptureScreenShotOfSpecificArea.java</url>
+          <line>15</line>
+          <properties class="comassignment.CaptureScreenShotOfSpecificArea" method="captureScreenShot">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

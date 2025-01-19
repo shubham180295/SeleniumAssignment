@@ -1,0 +1,360 @@
+Index: src/test/java/comassignment/TC002_UseCase_2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package comassignment;\r\n\r\nimport genericUtility.BaseClass;\r\nimport genericUtility.ExtentReportManager;\r\nimport io.github.bonigarcia.wdm.WebDriverManager;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\nimport org.testng.annotations.Listeners;\r\nimport org.testng.annotations.Test;\r\nimport pageObjectRepository.OrangeHRM;\r\nimport java.io.IOException;\r\nimport java.util.concurrent.TimeUnit;\r\n\r\n@Listeners(ExtentReportManager.class)\r\npublic class TC002_UseCase_2\r\n\r\n{\r\n    public static WebDriver driver;\r\n\r\n    @Test(priority = 1)\r\n    public void loginWithValidCredentials() throws IOException, InterruptedException {\r\n        WebDriverManager.chromedriver().setup();\r\n        driver=new ChromeDriver();\r\n        driver.get(\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\");\r\n        driver.manage().window().maximize();\r\n        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);\r\n        OrangeHRM org = new OrangeHRM(driver);\r\n             org.enterValidDataIntoExcel();\r\n        driver.quit();\r\n\r\n    }\r\n    @Test(priority = 2)\r\n    public void loginWithInValidCredentials() throws IOException, InterruptedException {\r\n        WebDriverManager.chromedriver().setup();\r\n        driver=new ChromeDriver();\r\n        driver.get(\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\");\r\n        driver.manage().window().maximize();\r\n        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);\r\n        OrangeHRM org = new OrangeHRM(driver);\r\n        org.enterInValidDataIntoExcel();\r\n        driver.quit();\r\n\r\n\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/comassignment/TC002_UseCase_2.java b/src/test/java/comassignment/TC002_UseCase_2.java
+--- a/src/test/java/comassignment/TC002_UseCase_2.java	(revision 014b19b7cc0c6906fcd9b4a9651481c3f4f2d827)
++++ b/src/test/java/comassignment/TC002_UseCase_2.java	(date 1737282966892)
+@@ -9,7 +9,8 @@
+ import org.testng.annotations.Test;
+ import pageObjectRepository.OrangeHRM;
+ import java.io.IOException;
+-import java.util.concurrent.TimeUnit;
++import java.time.Duration;
++
+ 
+ @Listeners(ExtentReportManager.class)
+ public class TC002_UseCase_2
+@@ -23,7 +24,7 @@
+         driver=new ChromeDriver();
+         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+         driver.manage().window().maximize();
+-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
++        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+         OrangeHRM org = new OrangeHRM(driver);
+              org.enterValidDataIntoExcel();
+         driver.quit();
+@@ -35,7 +36,7 @@
+         driver=new ChromeDriver();
+         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+         driver.manage().window().maximize();
+-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
++        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+         OrangeHRM org = new OrangeHRM(driver);
+         org.enterInValidDataIntoExcel();
+         driver.quit();
+Index: src/test/java/comassignment/CaptureScreenShotOfSpecificArea.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package comassignment;\r\n\r\nimport io.github.bonigarcia.wdm.WebDriverManager;\r\nimport org.openqa.selenium.OutputType;\r\nimport org.openqa.selenium.TakesScreenshot;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\nimport org.testng.annotations.Test;\r\nimport java.io.File;\r\nimport java.util.concurrent.TimeUnit;\r\n\r\npublic class CaptureScreenShotOfSpecificArea {\r\n\r\n    @Test\r\n    public void captureScreenShot()\r\n    {\r\n        WebDriverManager.chromiumdriver().setup();\r\n        WebDriver driver= new ChromeDriver();\r\n        driver.manage().window().maximize();\r\n        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);\r\n        driver.get(\"https://www.google.com/\");\r\n        TakesScreenshot ts = (TakesScreenshot) driver;\r\n        File sourceFile = ts.getScreenshotAs(OutputType.FILE);\r\n        File f = new File(\"./screenshots/screenshot.png\");\r\n        sourceFile.renameTo(f);\r\n\r\n\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/comassignment/CaptureScreenShotOfSpecificArea.java b/src/test/java/comassignment/CaptureScreenShotOfSpecificArea.java
+--- a/src/test/java/comassignment/CaptureScreenShotOfSpecificArea.java	(revision 014b19b7cc0c6906fcd9b4a9651481c3f4f2d827)
++++ b/src/test/java/comassignment/CaptureScreenShotOfSpecificArea.java	(date 1737282605098)
+@@ -7,7 +7,8 @@
+ import org.openqa.selenium.chrome.ChromeDriver;
+ import org.testng.annotations.Test;
+ import java.io.File;
+-import java.util.concurrent.TimeUnit;
++import java.time.Duration;
++
+ 
+ public class CaptureScreenShotOfSpecificArea {
+ 
+@@ -17,7 +18,7 @@
+         WebDriverManager.chromiumdriver().setup();
+         WebDriver driver= new ChromeDriver();
+         driver.manage().window().maximize();
+-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
++        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+         driver.get("https://www.google.com/");
+         TakesScreenshot ts = (TakesScreenshot) driver;
+         File sourceFile = ts.getScreenshotAs(OutputType.FILE);
+Index: src/test/java/comassignment/TC001_UseCase_1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package comassignment;\r\n\r\nimport genericUtility.ExcelUtility;\r\nimport genericUtility.ExtentReportManager;\r\nimport io.github.bonigarcia.wdm.WebDriverManager;\r\nimport org.openqa.selenium.By;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.WebElement;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\nimport org.testng.annotations.Listeners;\r\nimport org.testng.annotations.Test;\r\nimport pageObjectRepository.ErailHomePage;\r\nimport java.io.IOException;\r\nimport java.util.List;\r\nimport java.util.concurrent.TimeUnit;\r\n\r\n@Listeners(ExtentReportManager.class)\r\npublic class TC001_UseCase_1  {\r\n\r\n\tpublic static WebDriver driver;\r\n\r\n\t@Test\r\n\tpublic void booking() throws InterruptedException, IOException {\r\n\t\tWebDriverManager.chromedriver().setup();\r\n\t\tdriver=new ChromeDriver();\r\n\t\tdriver.get(\"https://erail.in/\");\r\n\t\tdriver.manage().window().maximize();\r\n\t\tdriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);\r\n\t\tString path = \"./data.xlsx\";\r\n\t\tExcelUtility excelUtility = new ExcelUtility(path);\r\n\t\tErailHomePage er = new  ErailHomePage(driver);\r\n\t\ter.clearField();\r\n\t\ter.enterField();\r\n\t\ter.printFourthPositionElement();\r\n\t\texcelUtility.writeExpectedStationIntoExcel();\r\n\t\tList<WebElement> allData =er.getDropDownStation();\r\n\t\tint rowSize=allData.size();\r\n\t\tfor(int i=0;i<rowSize;i++)\r\n\t\t{\r\n\t\t\tString data = allData.get(i).getText().trim().replaceAll(\"\\\\s+\", \" \");;\r\n\t\t\texcelUtility.setCellData(\"DropdownData\", i ,0,data);\r\n\t\t\t}\r\n\r\n      excelUtility.compareTwoExcelFiles();\r\n\t  er.sortFutureTime();\r\n\t\tdriver.quit();\r\n\t}\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/comassignment/TC001_UseCase_1.java b/src/test/java/comassignment/TC001_UseCase_1.java
+--- a/src/test/java/comassignment/TC001_UseCase_1.java	(revision 014b19b7cc0c6906fcd9b4a9651481c3f4f2d827)
++++ b/src/test/java/comassignment/TC001_UseCase_1.java	(date 1737283017580)
+@@ -11,8 +11,9 @@
+ import org.testng.annotations.Test;
+ import pageObjectRepository.ErailHomePage;
+ import java.io.IOException;
++import java.time.Duration;
+ import java.util.List;
+-import java.util.concurrent.TimeUnit;
++
+ 
+ @Listeners(ExtentReportManager.class)
+ public class TC001_UseCase_1  {
+@@ -25,7 +26,7 @@
+ 		driver=new ChromeDriver();
+ 		driver.get("https://erail.in/");
+ 		driver.manage().window().maximize();
+-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
++		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+ 		String path = "./data.xlsx";
+ 		ExcelUtility excelUtility = new ExcelUtility(path);
+ 		ErailHomePage er = new  ErailHomePage(driver);
+@@ -37,7 +38,7 @@
+ 		int rowSize=allData.size();
+ 		for(int i=0;i<rowSize;i++)
+ 		{
+-			String data = allData.get(i).getText().trim().replaceAll("\\s+", " ");;
++			String data = allData.get(i).getText().trim().replaceAll("\\s+", " ");
+ 			excelUtility.setCellData("DropdownData", i ,0,data);
+ 			}
+ 
+Index: src/test/java/comassignment/SeleniumSwitchTabAndWindow.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/comassignment/SeleniumSwitchTabAndWindow.java b/src/test/java/comassignment/SeleniumSwitchTabAndWindow.java
+new file mode 100644
+--- /dev/null	(date 1737274192679)
++++ b/src/test/java/comassignment/SeleniumSwitchTabAndWindow.java	(date 1737274192679)
+@@ -0,0 +1,24 @@
++package comassignment;
++
++import io.github.bonigarcia.wdm.WebDriverManager;
++import org.openqa.selenium.WebDriver;
++import org.openqa.selenium.WindowType;
++import org.openqa.selenium.chrome.ChromeDriver;
++import org.testng.annotations.Test;
++
++public class SeleniumSwitchTabAndWindow {
++
++    @Test
++    public void swithToWindow()
++    {
++
++        WebDriverManager.chromiumdriver().setup();
++        WebDriver driver = new ChromeDriver();
++        driver.get("https://github.com/");
++        driver.switchTo().newWindow(WindowType.WINDOW);
++                driver.get("https://www.youtube.com/");
++                //driver.close();
++        driver.quit();
++    }
++
++}
+Index: src/test/java/comassignment/SSL_Certification.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package comassignment;\r\n\r\nimport io.github.bonigarcia.wdm.WebDriverManager;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\nimport org.openqa.selenium.chrome.ChromeOptions;\r\nimport org.testng.annotations.Test;\r\n\r\npublic class SSL_Certification {\r\n\r\n    @Test\r\n    public void browserOpen()\r\n    {\r\n\r\n        ChromeOptions options = new ChromeOptions();\r\n        options.setAcceptInsecureCerts(true);\r\n        WebDriverManager.chromiumdriver().setup();\r\n        WebDriver driver= new ChromeDriver(options);\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/comassignment/SSL_Certification.java b/src/test/java/comassignment/SSL_Certification.java
+--- a/src/test/java/comassignment/SSL_Certification.java	(revision 014b19b7cc0c6906fcd9b4a9651481c3f4f2d827)
++++ b/src/test/java/comassignment/SSL_Certification.java	(date 1737282932998)
+@@ -16,6 +16,7 @@
+         options.setAcceptInsecureCerts(true);
+         WebDriverManager.chromiumdriver().setup();
+         WebDriver driver= new ChromeDriver(options);
++
+     }
+ 
+ }
+Index: src/test/java/comassignment/Shadow_Element.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/comassignment/Shadow_Element.java b/src/test/java/comassignment/Shadow_Element.java
+new file mode 100644
+--- /dev/null	(date 1737278457232)
++++ b/src/test/java/comassignment/Shadow_Element.java	(date 1737278457232)
+@@ -0,0 +1,27 @@
++package comassignment;
++
++import io.github.bonigarcia.wdm.WebDriverManager;
++import org.openqa.selenium.By;
++import org.openqa.selenium.SearchContext;
++import org.openqa.selenium.WebDriver;
++import org.openqa.selenium.WebElement;
++import org.openqa.selenium.chrome.ChromeDriver;
++import org.testng.annotations.Test;
++
++import java.time.Duration;
++
++public class Shadow_Element {
++    @Test
++    public void shadowHost() {
++        WebDriverManager.chromedriver().setup();
++        WebDriver driver = new ChromeDriver();
++        driver.manage().window().maximize();
++        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
++        driver.get("chrome://downloads/");
++
++        SearchContext shadowRoot = driver.findElement(By.cssSelector("#shadowelemet")).getShadowRoot();
++     SearchContext    shadow2=shadowRoot.findElement(By.cssSelector("secoundShoowHost")).getShadowRoot();
++        WebElement element =shadow2.findElement(By.cssSelector("#id"));
++
++    }
++}
+\ No newline at end of file
+Index: src/test/java/comassignment/CheckBoxes.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/comassignment/CheckBoxes.java b/src/test/java/comassignment/CheckBoxes.java
+new file mode 100644
+--- /dev/null	(date 1737292562661)
++++ b/src/test/java/comassignment/CheckBoxes.java	(date 1737292562661)
+@@ -0,0 +1,52 @@
++package comassignment;
++
++import io.github.bonigarcia.wdm.WebDriverManager;
++import org.openqa.selenium.By;
++import org.openqa.selenium.WebDriver;
++import org.openqa.selenium.WebElement;
++import org.openqa.selenium.chrome.ChromeDriver;
++import org.testng.annotations.Test;
++
++import java.time.Duration;
++import java.util.List;
++
++public class CheckBoxes {
++
++    @Test
++    public void handleCheckBox()
++    {
++        WebDriverManager.chromiumdriver().setup();
++        WebDriver driver= new ChromeDriver();
++        driver.manage().window().maximize();
++        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
++
++        driver.navigate().to("https://testautomationpractice.blogspot.com/");
++        // select specific checkboxe
++        //driver.findElement(By.xpath("//input[@id='sunday']")).click();
++
++        // select all the checkboxes
++        List<WebElement> allCheckBoxes =driver.findElements(By.xpath("//input[@class= 'form-check-input' and @type = 'checkbox']"));
++
++        /*for( int i=0;i<allCheckBoxes.size();i++)
++        allCheckBoxes.get(i).click();
++        }*/
++
++       /* for( WebElement check: allCheckBoxes)
++        {
++            check.click();
++        }*/
++// first 3 and last 3 i=4
++        for(int i=0;i<allCheckBoxes.size()-4;i++)
++        {
++            allCheckBoxes.get(i).click();
++        }
++
++        for(WebElement checkbox : allCheckBoxes)
++        {
++             if(checkbox.isSelected())
++             {
++                 checkbox.click();
++             }
++        }
++    }}
++
+Index: src/test/java/comassignment/SwitchWindow.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package comassignment;\r\n\r\nimport io.github.bonigarcia.wdm.WebDriverManager;\r\nimport org.openqa.selenium.By;\r\nimport org.openqa.selenium.Keys;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.WebElement;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\nimport org.openqa.selenium.interactions.Actions;\r\nimport org.testng.Assert;\r\nimport org.testng.annotations.Test;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.Set;\r\nimport java.util.concurrent.TimeUnit;\r\n\r\npublic class SwitchWindow {\r\n\r\n    @Test\r\n    public void switchToWindow() throws InterruptedException {\r\n        WebDriverManager.chromedriver().setup();\r\n        WebDriver driver = new ChromeDriver();\r\n        driver.manage().window().maximize();\r\n        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);\r\n        driver.get(\"https://www.google.com/\");\r\n        String parent =driver.getWindowHandle();\r\n        driver.findElement(By.name(\"q\")).sendKeys(\"gmail\"+ Keys.ENTER);\r\n\r\n        Thread.sleep(5000);\r\n       WebElement link=driver.findElement(By.xpath(\"//h3[text()='Gmail - Google']\"));\r\n       Actions a = new Actions(driver);\r\n        a.keyDown(Keys.CONTROL).click(link).keyUp(Keys.CONTROL).perform();\r\n        Set<String> allId=driver.getWindowHandles();\r\n\r\n        for( String id:allId)\r\n        {\r\n            if(!id.equals(parent))\r\n            {\r\n                driver.switchTo().window(id);\r\n                break;\r\n\r\n\r\n\r\n            }\r\n\r\n\r\n        }\r\n\r\n\r\n        WebElement element=driver.findElement(By.xpath(\"(//span[contains(text(),'Gmail')])[2]\"));\r\n        Assert.assertTrue(element.isDisplayed());\r\n        driver.switchTo().window(parent);\r\n        \r\n\r\n//        ArrayList<String> as = new ArrayList<>(allId);\r\n//        String ParentWindow= as.get(0);\r\n//          String  ChildWindow= as.get(1);\r\n//          driver.switchTo().window(ParentWindow);\r\n//          WebElement element=driver.findElement(By.xpath(\"(//span[contains(text(),'Gmail')])[2]\"));\r\n//          Assert.assertTrue(element.isDisplayed());\r\n//        driver.switchTo().window(ChildWindow);\r\n//        Thread.sleep(5000);\r\n//        driver.close();\r\n\r\n\r\n          }\r\n\r\n\r\n      }\r\n\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/comassignment/SwitchWindow.java b/src/test/java/comassignment/SwitchWindow.java
+--- a/src/test/java/comassignment/SwitchWindow.java	(revision 014b19b7cc0c6906fcd9b4a9651481c3f4f2d827)
++++ b/src/test/java/comassignment/SwitchWindow.java	(date 1737282966902)
+@@ -10,9 +10,10 @@
+ import org.testng.Assert;
+ import org.testng.annotations.Test;
+ 
++import java.time.Duration;
+ import java.util.ArrayList;
+ import java.util.Set;
+-import java.util.concurrent.TimeUnit;
++
+ 
+ public class SwitchWindow {
+ 
+@@ -21,7 +22,7 @@
+         WebDriverManager.chromedriver().setup();
+         WebDriver driver = new ChromeDriver();
+         driver.manage().window().maximize();
+-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
++        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+         driver.get("https://www.google.com/");
+         String parent =driver.getWindowHandle();
+         driver.findElement(By.name("q")).sendKeys("gmail"+ Keys.ENTER);
+Index: src/test/java/comassignment/BrokenLinks.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/comassignment/BrokenLinks.java b/src/test/java/comassignment/BrokenLinks.java
+new file mode 100644
+--- /dev/null	(date 1737276076552)
++++ b/src/test/java/comassignment/BrokenLinks.java	(date 1737276076552)
+@@ -0,0 +1,60 @@
++package comassignment;
++
++import com.google.gson.internal.bind.util.ISO8601Utils;
++import io.github.bonigarcia.wdm.WebDriverManager;
++import org.openqa.selenium.By;
++import org.openqa.selenium.WebDriver;
++import org.openqa.selenium.WebElement;
++import org.openqa.selenium.chrome.ChromeDriver;
++import org.testng.annotations.Test;
++import org.w3c.dom.ls.LSOutput;
++
++import java.io.IOException;
++import java.net.HttpURLConnection;
++import java.net.URL;
++import java.net.URLConnection;
++import java.util.ArrayList;
++import java.util.List;
++
++public class BrokenLinks {
++
++    @Test
++    public void brokenLinks() throws IOException {
++        WebDriverManager.chromiumdriver().setup();
++        WebDriver driver = new ChromeDriver();
++        driver.manage().window().maximize();
++        driver.get("http://www.deadlinkcity.com/");
++
++        List<WebElement> allLinks = driver.findElements(By.tagName("a"));
++
++        for (WebElement link : allLinks) {
++            String value = link.getAttribute("href");
++
++            System.out.println(value);
++
++            if (value.equals(null) || value.isEmpty()) {
++                System.out.println("Not Working ");
++                continue;
++            }
++            URL url = new URL(value);
++            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
++            connection.connect();
++            try {
++                if (connection.getResponseCode() >= 400) {
++
++                    System.out.println(value);
++                }
++
++                else {
++                    System.out.println("Not broken link");
++                }
++            }
++            catch (Exception e) {
++
++                System.out.println(e.getMessage());
++
++            }
++
++        }
++    }
++}
+\ No newline at end of file
